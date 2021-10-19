@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import SearchBar from "../src/components/SearchAppBar";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Welcome to vehicle Salah</h1>
+      <SearchBar />
     </div>
   );
 };
