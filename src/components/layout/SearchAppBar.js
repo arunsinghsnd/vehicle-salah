@@ -11,6 +11,7 @@ import Menu from "@mui/material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
+import { withRouter } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -51,7 +52,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const SearchAppBar = () => {
+const SearchAppBar = props => {
+  const { history } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -128,18 +130,24 @@ const SearchAppBar = () => {
     </Menu>
   );
 
+  const handleButtonClick = pageURL => {
+    history.push(pageURL);
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <Typography
-            variant="h6"
+            variant="h4"
             noWrap
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
+            onClick={() => handleButtonClick("/")}
           >
             Vehicel Salah
           </Typography>
+
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -150,6 +158,7 @@ const SearchAppBar = () => {
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
+
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="large"
@@ -157,12 +166,13 @@ const SearchAppBar = () => {
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
               color="inherit"
+              onClick={() => handleButtonClick("/login")}
             >
               <AccountCircle />
             </IconButton>
           </Box>
+
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -183,4 +193,4 @@ const SearchAppBar = () => {
   );
 };
 
-export default SearchAppBar;
+export default withRouter(SearchAppBar);
