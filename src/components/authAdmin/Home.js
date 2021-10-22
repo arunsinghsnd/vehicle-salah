@@ -23,7 +23,7 @@ const Home = () => {
     <div>
       <Link to="/">Home</Link>
       <br />
-      <Link to="/protected">Protected</Link>
+      <Link to="/admindashboard">Admin dashboard</Link>
       <br />
       {button}
     </div>

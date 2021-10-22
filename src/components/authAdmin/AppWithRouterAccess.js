@@ -4,7 +4,7 @@ import { Security, SecureRoute, LoginCallback } from "@okta/okta-react";
 import { OktaAuth, toRelativeUrl } from "@okta/okta-auth-js";
 import Home from "./Home";
 import Login from "./Login";
-import Protected from "./Protected";
+import AdminDashboard from "./AdminDashboard";
 import { oktaAuthConfig, oktaSignInConfig } from "./config";
 
 const oktaAuth = new OktaAuth(oktaAuthConfig);
@@ -28,7 +28,7 @@ const AppWithRouterAccess = () => {
     >
       <Switch>
         <Route path="/" exact={true} component={Home} />
-        <SecureRoute path="/protected" component={Protected} />
+        <SecureRoute path="/admindashboard" component={AdminDashboard} />
         <Route
           path="/login"
           render={() => <Login config={oktaSignInConfig} />}
