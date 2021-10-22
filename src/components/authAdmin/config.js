@@ -2,14 +2,14 @@ const oktaAuthConfig = {
   // Note: If your app is configured to use the Implicit flow
   // instead of the Authorization Code with Proof of Code Key Exchange (PKCE)
   // you will need to add `pkce: false`
-  issuer: "https://dev-47993024.okta.com/oauth2/default",
-  clientId: "0oa29zyov6CnkasUm5d7",
+  issuer: "https://dev-61604800.okta.com/oauth2/default",
+  clientId: "0oa2avajxzbWowHtf5d7",
   redirectUri: window.location.origin + "/login/callback",
 };
 
 const oktaSignInConfig = {
-  baseUrl: "https://dev-47993024.okta.com",
-  clientId: "0oa29zyov6CnkasUm5d7",
+  baseUrl: "https://dev-61604800.okta.com",
+  clientId: "0oa2avajxzbWowHtf5d7",
   redirectUri: window.location.origin + "/login/callback",
   authParams: {
     // If your app is configured to use the Implicit flow
