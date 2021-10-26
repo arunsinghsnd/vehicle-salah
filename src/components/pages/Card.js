@@ -5,6 +5,8 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material//Button";
 import Typography from "@mui/material/Typography";
+import CardMedia from "@mui/material/CardMedia";
+import { Grid } from "@mui/material";
 
 const useStyles = makeStyles({
   root: {
@@ -24,36 +26,59 @@ const useStyles = makeStyles({
   },
 });
 
-const CardPreview = () => {
+const CardPreview = props => {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
-    <Card className={classes.root} variant="outlined">
-      <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">View More</Button>
-      </CardActions>
-    </Card>
+    <Grid item xs={12} sm={6} md={4}>
+      <Card className={classes.root} variant="outlined">
+        <CardMedia
+          component="img"
+          height="300"
+          image={props.image}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography
+            className={classes.title}
+            color="textSecondary"
+            gutterBottom
+          >
+            {props.name}
+          </Typography>
+          <Typography variant="h5" component="h2">
+            {props.color}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            {props.brand}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            {props.engine}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            {props.power}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            {props.price}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            {props.rating}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            {props.seating}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            {props.type}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            {props.wheeler_type}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">View More</Button>
+        </CardActions>
+      </Card>
+    </Grid>
   );
 };
 

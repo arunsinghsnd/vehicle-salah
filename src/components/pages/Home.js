@@ -1,8 +1,9 @@
 import React from "react";
 import "./styles.css";
-import Card from "./Card";
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { vehicels } from "../Data/Vehicels";
+import CardList from "./CardList";
 
 const useStyles = makeStyles({
   gridContainer: {
@@ -20,33 +21,7 @@ const Home = () => {
       className={classes.gridContainer}
       justify="center"
     >
-      <Grid item xs={12} sm={6} md={4}>
-        <Card />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <Card />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <Card />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <Card />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <Card />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <Card />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <Card />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <Card />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <Card />
-      </Grid>
+      <CardList vehicels={vehicels} />
     </Grid>
   );
 };
