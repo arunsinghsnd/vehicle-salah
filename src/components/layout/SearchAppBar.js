@@ -12,6 +12,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { withRouter } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -55,6 +56,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const SearchAppBar = ({ history, SearchChange, searchField }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+  const [anchorElOption, setAnchorElOption] = React.useState(null);
+  const open = Boolean(anchorElOption);
+  const handleClick = event => {
+    setAnchorElOption(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorElOption(null);
+  };
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -157,6 +167,30 @@ const SearchAppBar = ({ history, SearchChange, searchField }) => {
               onChange={SearchChange}
             />
           </Search>
+
+          <Button
+            id="basic-button"
+            aria-controls="basic-menu"
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+            style={{ color: "white" }}
+          >
+            Advanced Filter
+          </Button>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorElOption}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              "aria-labelledby": "basic-button",
+            }}
+          >
+            <MenuItem onClick={handleClose}>2 Wheeler</MenuItem>
+            <MenuItem onClick={handleClose}>3 Wheeler</MenuItem>
+            <MenuItem onClick={handleClose}>4 Wheeler</MenuItem>
+          </Menu>
 
           <Box sx={{ flexGrow: 1 }} />
 
