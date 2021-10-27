@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import "./styles.css";
 
 const CardList = ({ vehicels, showMoreItem, onLoadMore }) => {
   return (
@@ -28,7 +29,9 @@ const CardList = ({ vehicels, showMoreItem, onLoadMore }) => {
           />
         );
       })}
-      <button onClick={onLoadMore}>Load More</button>
+      <button className="loadbutton" onClick={onLoadMore}>
+        Load More
+      </button>
     </>
   );
 };
