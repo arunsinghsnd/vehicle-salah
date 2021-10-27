@@ -1,29 +1,44 @@
-import React from "react";
+import React, { Component } from "react";
 import "./styles.css";
 import { Grid } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 import { vehicels } from "../Data/Vehicels";
 import CardList from "./CardList";
+import SearchAppBar from "../layout/SearchAppBar";
 
-const useStyles = makeStyles({
-  gridContainer: {
-    paddingLeft: "40px",
-    paddingRight: "40px",
-  },
-});
+class Home extends Component {
+  constructor(props) {
+    super(props);
 
-const Home = () => {
-  const classes = useStyles();
-  return (
-    <Grid
-      container
-      spacing={4}
-      className={classes.gridContainer}
-      justify="center"
-    >
-      <CardList vehicels={vehicels} />
-    </Grid>
-  );
-};
+    this.state = {
+      vehicels: vehicels,
+      searchfield: "",
+    };
+  }
+
+  onSearchChange = event => {
+    this.setState({ searchfield: event.target.value });
+  };
+
+  render() {
+    const filteredVehicels = this.state.vehicels.filter(vehicels => {
+      return vehicels.brand
+        .toLowerCase()
+        .includes(this.state.searchfield.toLocaleLowerCase());
+    });
+    return (
+      <>
+        <SearchAppBar SearchChange={this.onSearchChange} />
+        <Grid
+          container
+          spacing={4}
+          style={{ paddingLeft: "40px", paddingRight: "40px" }}
+          justify="center"
+        >
+          <CardList vehicels={filteredVehicels} />
+        </Grid>
+      </>
+    );
+  }
+}
 
 export default Home;

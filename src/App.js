@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <SearchBar />
+        {/* <SearchBar /> */}
         <Route path="/" exact={true} component={Home} />
         <AppWithRouterAccess />
       </div>
