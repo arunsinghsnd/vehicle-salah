@@ -1,10 +1,10 @@
 import React from "react";
 import Card from "./Card";
 
-const CardList = ({ vehicels }) => {
+const CardList = ({ vehicels, showMoreItem, onLoadMore }) => {
   return (
     <>
-      {vehicels.map((vehicle, i) => {
+      {vehicels.slice(0, showMoreItem).map((vehicle, i) => {
         return (
           <Card
             key={i}
@@ -28,6 +28,7 @@ const CardList = ({ vehicels }) => {
           />
         );
       })}
+      <button onClick={onLoadMore}>Load More</button>
     </>
   );
 };

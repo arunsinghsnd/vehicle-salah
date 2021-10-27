@@ -12,11 +12,20 @@ class Home extends Component {
     this.state = {
       vehicels: vehicels,
       searchfield: "",
+      visible: 10,
     };
   }
 
   onSearchChange = event => {
     this.setState({ searchfield: event.target.value });
+  };
+
+  showMoreItems = () => {
+    this.setState(prevValue => {
+      return {
+        visible: prevValue.visible + 5,
+      };
+    });
   };
 
   render() {
@@ -39,7 +48,11 @@ class Home extends Component {
             style={{ paddingLeft: "40px", paddingRight: "40px" }}
             justify="center"
           >
-            <CardList vehicels={filteredVehicels} />
+            <CardList
+              vehicels={filteredVehicels}
+              showMoreItem={this.state.visible}
+              onLoadMore={this.showMoreItems}
+            />
           </Grid>
         )}
       </>
