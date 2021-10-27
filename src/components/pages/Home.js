@@ -28,14 +28,20 @@ class Home extends Component {
     return (
       <>
         <SearchAppBar SearchChange={this.onSearchChange} />
-        <Grid
-          container
-          spacing={4}
-          style={{ paddingLeft: "40px", paddingRight: "40px" }}
-          justify="center"
-        >
-          <CardList vehicels={filteredVehicels} />
-        </Grid>
+        {filteredVehicels.length === 0 ? (
+          <div>
+            <h1>No Results Found</h1>
+          </div>
+        ) : (
+          <Grid
+            container
+            spacing={4}
+            style={{ paddingLeft: "40px", paddingRight: "40px" }}
+            justify="center"
+          >
+            <CardList vehicels={filteredVehicels} />
+          </Grid>
+        )}
       </>
     );
   }
