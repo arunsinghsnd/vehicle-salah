@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/vehicle-salah/static/css/main.6fbc86eb.chunk.css",
-    "main.js": "/vehicle-salah/static/js/main.fc74782d.chunk.js",
-    "main.js.map": "/vehicle-salah/static/js/main.fc74782d.chunk.js.map",
+    "main.js": "/vehicle-salah/static/js/main.629719ae.chunk.js",
+    "main.js.map": "/vehicle-salah/static/js/main.629719ae.chunk.js.map",
     "runtime-main.js": "/vehicle-salah/static/js/runtime-main.f401b2f8.js",
     "runtime-main.js.map": "/vehicle-salah/static/js/runtime-main.f401b2f8.js.map",
     "static/css/2.294ab42b.chunk.css": "/vehicle-salah/static/css/2.294ab42b.chunk.css",
-    "static/js/2.cd0a93e3.chunk.js": "/vehicle-salah/static/js/2.cd0a93e3.chunk.js",
-    "static/js/2.cd0a93e3.chunk.js.map": "/vehicle-salah/static/js/2.cd0a93e3.chunk.js.map",
+    "static/js/2.66300b4c.chunk.js": "/vehicle-salah/static/js/2.66300b4c.chunk.js",
+    "static/js/2.66300b4c.chunk.js.map": "/vehicle-salah/static/js/2.66300b4c.chunk.js.map",
     "index.html": "/vehicle-salah/index.html",
     "static/css/2.294ab42b.chunk.css.map": "/vehicle-salah/static/css/2.294ab42b.chunk.css.map",
     "static/css/main.6fbc86eb.chunk.css.map": "/vehicle-salah/static/css/main.6fbc86eb.chunk.css.map",
-    "static/js/2.cd0a93e3.chunk.js.LICENSE.txt": "/vehicle-salah/static/js/2.cd0a93e3.chunk.js.LICENSE.txt",
+    "static/js/2.66300b4c.chunk.js.LICENSE.txt": "/vehicle-salah/static/js/2.66300b4c.chunk.js.LICENSE.txt",
     "static/media/okta-sign-in.min.css": "/vehicle-salah/static/media/yubikeyDemo.5ebed9d6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f401b2f8.js",
     "static/css/2.294ab42b.chunk.css",
-    "static/js/2.cd0a93e3.chunk.js",
+    "static/js/2.66300b4c.chunk.js",
     "static/css/main.6fbc86eb.chunk.css",
-    "static/js/main.fc74782d.chunk.js"
+    "static/js/main.629719ae.chunk.js"
   ]
 }
