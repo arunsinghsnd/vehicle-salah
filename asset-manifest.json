@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/github.io/vehicle-salah/static/css/main.6fbc86eb.chunk.css",
-    "main.js": "/github.io/vehicle-salah/static/js/main.5a87438e.chunk.js",
-    "main.js.map": "/github.io/vehicle-salah/static/js/main.5a87438e.chunk.js.map",
-    "runtime-main.js": "/github.io/vehicle-salah/static/js/runtime-main.e9d7aa22.js",
-    "runtime-main.js.map": "/github.io/vehicle-salah/static/js/runtime-main.e9d7aa22.js.map",
-    "static/css/2.10501827.chunk.css": "/github.io/vehicle-salah/static/css/2.10501827.chunk.css",
-    "static/js/2.440a2544.chunk.js": "/github.io/vehicle-salah/static/js/2.440a2544.chunk.js",
-    "static/js/2.440a2544.chunk.js.map": "/github.io/vehicle-salah/static/js/2.440a2544.chunk.js.map",
-    "index.html": "/github.io/vehicle-salah/index.html",
-    "static/css/2.10501827.chunk.css.map": "/github.io/vehicle-salah/static/css/2.10501827.chunk.css.map",
-    "static/css/main.6fbc86eb.chunk.css.map": "/github.io/vehicle-salah/static/css/main.6fbc86eb.chunk.css.map",
-    "static/js/2.440a2544.chunk.js.LICENSE.txt": "/github.io/vehicle-salah/static/js/2.440a2544.chunk.js.LICENSE.txt",
-    "static/media/okta-sign-in.min.css": "/github.io/vehicle-salah/static/media/yubikeyDemo.5ebed9d6.png"
+    "main.css": "/vehicle-salah/static/css/main.6fbc86eb.chunk.css",
+    "main.js": "/vehicle-salah/static/js/main.5a87438e.chunk.js",
+    "main.js.map": "/vehicle-salah/static/js/main.5a87438e.chunk.js.map",
+    "runtime-main.js": "/vehicle-salah/static/js/runtime-main.f401b2f8.js",
+    "runtime-main.js.map": "/vehicle-salah/static/js/runtime-main.f401b2f8.js.map",
+    "static/css/2.294ab42b.chunk.css": "/vehicle-salah/static/css/2.294ab42b.chunk.css",
+    "static/js/2.cd0a93e3.chunk.js": "/vehicle-salah/static/js/2.cd0a93e3.chunk.js",
+    "static/js/2.cd0a93e3.chunk.js.map": "/vehicle-salah/static/js/2.cd0a93e3.chunk.js.map",
+    "index.html": "/vehicle-salah/index.html",
+    "static/css/2.294ab42b.chunk.css.map": "/vehicle-salah/static/css/2.294ab42b.chunk.css.map",
+    "static/css/main.6fbc86eb.chunk.css.map": "/vehicle-salah/static/css/main.6fbc86eb.chunk.css.map",
+    "static/js/2.cd0a93e3.chunk.js.LICENSE.txt": "/vehicle-salah/static/js/2.cd0a93e3.chunk.js.LICENSE.txt",
+    "static/media/okta-sign-in.min.css": "/vehicle-salah/static/media/yubikeyDemo.5ebed9d6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e9d7aa22.js",
-    "static/css/2.10501827.chunk.css",
-    "static/js/2.440a2544.chunk.js",
+    "static/js/runtime-main.f401b2f8.js",
+    "static/css/2.294ab42b.chunk.css",
+    "static/js/2.cd0a93e3.chunk.js",
     "static/css/main.6fbc86eb.chunk.css",
     "static/js/main.5a87438e.chunk.js"
   ]
