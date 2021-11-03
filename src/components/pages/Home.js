@@ -13,7 +13,6 @@ class Home extends Component {
       vehicels: vehicels,
       searchfield: "",
       visible: 10,
-      selectWheeler: "",
     };
   }
 
@@ -40,17 +39,13 @@ class Home extends Component {
         .includes(this.state.searchfield.toLocaleLowerCase());
     });
 
-    const selectedWheeler = this.state.vehicels.filter(curVevehicels => {
-      return curVevehicels.vehicle.wheeler_type === this.select;
-    });
-
     return (
       <>
         <SearchAppBar
           SearchChange={this.onSearchChange}
           ClickFilter={() => this.onClickFilter()}
         />
-        {selectedWheeler && filteredVehicels.length === 0 ? (
+        {filteredVehicels.length === 0 ? (
           <div>
             <h1>No Results Found</h1>
           </div>
@@ -62,7 +57,7 @@ class Home extends Component {
             justify="center"
           >
             <CardList
-              vehicels={filteredVehicels || selectedWheeler}
+              vehicels={filteredVehicels}
               showMoreItem={this.state.visible}
               onLoadMore={this.showMoreItems}
             />

@@ -188,18 +188,10 @@ const SearchAppBar = ({ history, SearchChange, searchField, ClickFilter }) => {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={() => [handleClose, ClickFilter(vehicels)]}>
-              All Wheeler
-            </MenuItem>
-            <MenuItem onClick={() => [handleClose, ClickFilter("2")]}>
-              2 Wheeler
-            </MenuItem>
-            <MenuItem onClick={() => [handleClose, ClickFilter("3")]}>
-              3 Wheeler
-            </MenuItem>
-            <MenuItem onClick={() => [handleClose, ClickFilter("4")]}>
-              4 Wheeler
-            </MenuItem>
+            <MenuItem onClick={() => [handleClose]}>All Wheeler</MenuItem>
+            <MenuItem onClick={() => [handleClose]}>2 Wheeler</MenuItem>
+            <MenuItem onClick={() => [handleClose]}>3 Wheeler</MenuItem>
+            <MenuItem onClick={() => [handleClose]}>4 Wheeler</MenuItem>
           </Menu>
 
           <Box sx={{ flexGrow: 1 }} />
