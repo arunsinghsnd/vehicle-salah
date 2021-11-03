@@ -13,7 +13,7 @@ const App = () => {
         {/* <SearchBar /> */}
         <Route path="/" exact={true} component={Home} />
         <AppWithRouterAccess />
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );

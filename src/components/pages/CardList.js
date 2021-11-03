@@ -3,6 +3,7 @@ import Card from "./Card";
 import "./styles.css";
 
 const CardList = ({ vehicels, showMoreItem, onLoadMore }) => {
+  console.log(vehicels);
   return (
     <>
       {vehicels.slice(0, showMoreItem).map((vehicle, i) => {

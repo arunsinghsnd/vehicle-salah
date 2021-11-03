@@ -13,6 +13,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { withRouter } from "react-router-dom";
 import Button from "@mui/material/Button";
+import { vehicels } from "../Data/Vehicels";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -53,7 +54,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const SearchAppBar = ({ history, SearchChange, searchField }) => {
+const SearchAppBar = ({ history, SearchChange, searchField, ClickFilter }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -187,9 +188,18 @@ const SearchAppBar = ({ history, SearchChange, searchField }) => {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={handleClose}>2 Wheeler</MenuItem>
-            <MenuItem onClick={handleClose}>3 Wheeler</MenuItem>
-            <MenuItem onClick={handleClose}>4 Wheeler</MenuItem>
+            <MenuItem onClick={() => [handleClose, ClickFilter(vehicels)]}>
+              All Wheeler
+            </MenuItem>
+            <MenuItem onClick={() => [handleClose, ClickFilter("2")]}>
+              2 Wheeler
+            </MenuItem>
+            <MenuItem onClick={() => [handleClose, ClickFilter("3")]}>
+              3 Wheeler
+            </MenuItem>
+            <MenuItem onClick={() => [handleClose, ClickFilter("4")]}>
+              4 Wheeler
+            </MenuItem>
           </Menu>
 
           <Box sx={{ flexGrow: 1 }} />

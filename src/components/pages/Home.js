@@ -13,11 +13,16 @@ class Home extends Component {
       vehicels: vehicels,
       searchfield: "",
       visible: 10,
+      selectWheeler: "",
     };
   }
 
   onSearchChange = event => {
     this.setState({ searchfield: event.target.value });
+  };
+
+  onClickFilter = select => {
+    this.setState({ selectWheeler: this.select });
   };
 
   showMoreItems = () => {
@@ -34,10 +39,18 @@ class Home extends Component {
         .toLowerCase()
         .includes(this.state.searchfield.toLocaleLowerCase());
     });
+
+    const selectedWheeler = this.state.vehicels.filter(curVevehicels => {
+      return curVevehicels.vehicle.wheeler_type === this.select;
+    });
+
     return (
       <>
-        <SearchAppBar SearchChange={this.onSearchChange} />
-        {filteredVehicels.length === 0 ? (
+        <SearchAppBar
+          SearchChange={this.onSearchChange}
+          ClickFilter={() => this.onClickFilter()}
+        />
+        {selectedWheeler && filteredVehicels.length === 0 ? (
           <div>
             <h1>No Results Found</h1>
           </div>
@@ -49,13 +62,12 @@ class Home extends Component {
             justify="center"
           >
             <CardList
-              vehicels={filteredVehicels}
+              vehicels={filteredVehicels || selectedWheeler}
               showMoreItem={this.state.visible}
               onLoadMore={this.showMoreItems}
             />
           </Grid>
         )}
-        
       </>
     );
   }
